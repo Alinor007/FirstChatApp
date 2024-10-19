@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Chat";
+    var username = User.Identity.Name; // Get the logged-in username
+}
+
+<div class="chat-container">
+    <div class="chat-header">
+        SignalR Chat
+    </div>
+    <div class="chat-input">
+            <input type="text" id="userInput" value="@username" readonly />
+            <!-- Add a dropdown for selecting the receiver -->
+            <select id="receiverDropdown">
+                <option value="">Select a recipient</option>
+            </select>
+        </div>
+                <div id="messagesList" class="chat-messages">
+                    <!-- Messages will be dynamically inserted here -->
+                </div>
+      <div class="chat-input">
+    
+        <input type="text" id="messageInput" placeholder="Enter your message" />
+        <button id="sendButton">Send</button>
+        </div>
+    
+</div>
+
+<!-- Include SignalR and external JS file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.0/signalr.min.js"></script>
+<script src="~/js/chat.js"></script>

@@ -1,0 +1,30 @@
+{
+  "name": "Tailwind",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+ "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
+  },
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/site.min.css --minify",
+    "watch:css": "npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/site.min.css --watch"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.13"
+  }
+}
